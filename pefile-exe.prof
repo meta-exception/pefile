@@ -1,0 +1,139 @@
+	Tue May 28 13:32 2019 Time and Allocation Profiling Report  (Final)
+
+	   pefile-exe +RTS -N -p -RTS
+
+	total time  =        0.04 secs   (130 ticks @ 1000 us, 8 processors)
+	total alloc =  46,849,320 bytes  (excludes profiling overheads)
+
+COST CENTRE                              MODULE         SRC                                  %time %alloc
+
+mmapFileForeignPtrLazyChunk.\            System.IO.MMap System/IO/MMap.hs:(310,41)-(321,52)   89.2   52.6
+mmapFileForeignPtrLazyChunk              System.IO.MMap System/IO/MMap.hs:(309,1)-(321,52)     3.1    0.0
+mmapFileForeignPtrLazyChunk.\.rawsizeptr System.IO.MMap System/IO/MMap.hs:319:13-45            1.5    2.2
+mmapFileForeignPtrLazy.mmap              System.IO.MMap System/IO/MMap.hs:(298,9)-(300,96)     1.5   14.5
+chunks.offset2                           System.IO.MMap System/IO/MMap.hs:326:38-117           1.5    2.2
+chunks                                   System.IO.MMap System/IO/MMap.hs:(324,1)-(329,93)     1.5   25.7
+chunks.size2                             System.IO.MMap System/IO/MMap.hs:327:38-63            0.8    2.2
+
+
+                                                                                                                            individual      inherited
+COST CENTRE                                    MODULE                SRC                                 no.     entries  %time %alloc   %time %alloc
+
+MAIN                                           MAIN                  <built-in>                          262          0    0.0    0.3   100.0  100.0
+ CAF                                           GHC.Conc.Signal       <entire-module>                     368          0    0.0    0.0     0.0    0.0
+ CAF                                           GHC.Conc.Sync         <entire-module>                     367          0    0.0    0.0     0.0    0.0
+ CAF                                           GHC.IO.Encoding       <entire-module>                     352          0    0.0    0.0     0.0    0.0
+ CAF                                           GHC.IO.Encoding.Iconv <entire-module>                     350          0    0.0    0.0     0.0    0.0
+ CAF                                           GHC.IO.Exception      <entire-module>                     344          0    0.0    0.0     0.0    0.0
+ CAF                                           GHC.IO.Handle.FD      <entire-module>                     342          0    0.0    0.1     0.0    0.1
+ CAF                                           GHC.IO.Handle.Text    <entire-module>                     340          0    0.0    0.0     0.0    0.0
+ CAF                                           GHC.Show              <entire-module>                     323          0    0.0    0.0     0.0    0.0
+ CAF                                           GHC.Event.Thread      <entire-module>                     299          0    0.0    0.0     0.0    0.0
+ CAF                                           GHC.Event.Poll        <entire-module>                     278          0    0.0    0.0     0.0    0.0
+ CAF:$fShowIMAGE_DATA_DIRECTORY4               Structures            <no location info>                  446          0    0.0    0.0     0.0    0.0
+ CAF:accessMode                                Lib                   src/Lib.hs:16:1-10                  483          0    0.0    0.0     0.0    0.0
+  accessMode                                   Lib                   src/Lib.hs:16:1-30                  567          1    0.0    0.0     0.0    0.0
+ CAF:chunk                                     Lib                   src/Lib.hs:18:1-5                   484          0    0.0    0.0     0.0    0.0
+  chunk                                        Lib                   src/Lib.hs:18:1-84                  543          1    0.0    0.0     0.0    0.0
+ CAF:chunkSizeLong_r9bj                        System.IO.MMap        System/IO/MMap.hs:328:38-50         424          0    0.0    0.0     0.0    0.0
+  chunks                                       System.IO.MMap        System/IO/MMap.hs:(324,1)-(329,93)  584          0    0.0    0.0     0.0    0.0
+   chunks.chunkSizeLong                        System.IO.MMap        System/IO/MMap.hs:328:38-75         585          1    0.0    0.0     0.0    0.0
+ CAF:chunkSize_r1Ij                            System.IO.MMap        System/IO/MMap.hs:351:1-9           423          0    0.0    0.0     0.0    0.0
+  chunkSize                                    System.IO.MMap        System/IO/MMap.hs:351:1-104         580          1    0.0    0.0     0.0    0.0
+ CAF:getDosHeader1                             Structures            <no location info>                  479          0    0.0    0.0     0.0    0.0
+  getDosHeader                                 Structures            src/Structures.hs:(59,3)-(78,19)    555          1    0.0    0.0     0.0    0.0
+ CAF:getRes1                                   Structures            <no location info>                  477          0    0.0    0.0     0.0    0.0
+  getRes                                       Structures            src/Structures.hs:(39,3)-(44,27)    558          1    0.0    0.0     0.0    0.0
+ CAF:getRes3                                   Structures            <no location info>                  475          0    0.0    0.0     0.0    0.0
+  getRes2                                      Structures            src/Structures.hs:(46,3)-(57,51)    560          1    0.0    0.0     0.0    0.0
+ CAF:image_dos_header_bytes                    Structures            src/Structures.hs:9:3-24            471          0    0.0    0.0     0.0    0.0
+  image_dos_header_bytes                       Structures            src/Structures.hs:9:3-36            544          1    0.0    0.0     0.0    0.0
+ CAF:image_dos_header_offset                   Structures            src/Structures.hs:8:3-25            470          0    0.0    0.0     0.0    0.0
+  image_dos_header_offset                      Structures            src/Structures.hs:8:3-38            545          1    0.0    0.0     0.0    0.0
+ CAF:loadFile1                                 Lib                   <no location info>                  494          0    0.0    0.0     0.0    0.0
+  loadFile                                     Lib                   src/Lib.hs:(41,1)-(50,18)           525          1    0.0    0.0     0.0    0.0
+ CAF:loadFile7                                 Lib                   <no location info>                  492          0    0.0    0.0     0.0    0.0
+  loadFile                                     Lib                   src/Lib.hs:(41,1)-(50,18)           563          0    0.0    0.0     0.0    0.0
+   mmapFileForeignPtrLazy                      System.IO.MMap        System/IO/MMap.hs:(293,1)-(300,96)  564          1    0.0    0.0     0.0    0.0
+ CAF:loadFile9                                 Lib                   <no location info>                  493          0    0.0    0.0     0.0    0.0
+  loadFile                                     Lib                   src/Lib.hs:(41,1)-(50,18)           528          0    0.0    0.0     0.0    0.0
+   mmapFileByteString                          System.IO.MMap        System/IO/MMap.hs:(276,1)-(279,21)  529          0    0.0    0.0     0.0    0.0
+    mmapFileForeignPtr                         System.IO.MMap        System/IO/MMap.hs:(264,1)-(269,35)  530          1    0.0    0.0     0.0    0.0
+ CAF:lvl16_r9bp                                System.IO.MMap        <no location info>                  425          0    0.0    0.0     0.0    0.0
+ CAF:lvl44_raqe                                Structures            <no location info>                  450          0    0.0    0.0     0.0    0.0
+ CAF:lvl45_raqf                                Structures            <no location info>                  451          0    0.0    0.0     0.0    0.0
+ CAF:lvl46_raqg                                Structures            <no location info>                  452          0    0.0    0.0     0.0    0.0
+ CAF:lvl47_raqh                                Structures            <no location info>                  453          0    0.0    0.0     0.0    0.0
+ CAF:lvl48_raqi                                Structures            <no location info>                  454          0    0.0    0.0     0.0    0.0
+ CAF:lvl49_raqj                                Structures            <no location info>                  455          0    0.0    0.0     0.0    0.0
+ CAF:lvl50_raqk                                Structures            <no location info>                  456          0    0.0    0.0     0.0    0.0
+ CAF:lvl51_raql                                Structures            <no location info>                  457          0    0.0    0.0     0.0    0.0
+ CAF:lvl52_raqm                                Structures            <no location info>                  458          0    0.0    0.0     0.0    0.0
+ CAF:lvl53_raqn                                Structures            <no location info>                  459          0    0.0    0.0     0.0    0.0
+ CAF:lvl54_raqo                                Structures            <no location info>                  460          0    0.0    0.0     0.0    0.0
+ CAF:lvl55_raqp                                Structures            <no location info>                  461          0    0.0    0.0     0.0    0.0
+ CAF:lvl56_raqq                                Structures            <no location info>                  462          0    0.0    0.0     0.0    0.0
+ CAF:lvl57_raqr                                Structures            <no location info>                  463          0    0.0    0.0     0.0    0.0
+ CAF:lvl58_raqs                                Structures            <no location info>                  464          0    0.0    0.0     0.0    0.0
+ CAF:lvl59_raqt                                Structures            <no location info>                  465          0    0.0    0.0     0.0    0.0
+ CAF:lvl60_raqu                                Structures            <no location info>                  466          0    0.0    0.0     0.0    0.0
+ CAF:lvl61_raqv                                Structures            <no location info>                  467          0    0.0    0.0     0.0    0.0
+ CAF:lvl62_raqw                                Structures            <no location info>                  468          0    0.0    0.0     0.0    0.0
+ CAF:lvl63_raqx                                Structures            <no location info>                  469          0    0.0    0.0     0.0    0.0
+ CAF:main1                                     Main                  <no location info>                  522          0    0.0    0.0     0.0    0.0
+  main                                         Main                  app/Main.hs:6:1-15                  524          1    0.0    0.0     0.0    0.0
+ CAF:p                                         Lib                   src/Lib.hs:20:1                     485          0    0.0    0.0     0.0    0.0
+  p                                            Lib                   src/Lib.hs:20:1-126                 569          1    0.0    0.0     0.0    0.0
+ CAF:path                                      Lib                   src/Lib.hs:14:1-4                   482          0    0.0    0.0     0.0    0.0
+  path                                         Lib                   src/Lib.hs:14:1-93                  536          1    0.0    0.0     0.0    0.0
+ loadFile                                      Lib                   src/Lib.hs:(41,1)-(50,18)           526          0    0.0    0.0   100.0   99.6
+  loadFile.g                                   Lib                   src/Lib.hs:46:7-47                  576          1    0.0    0.0     0.0    0.0
+   getForeignByOffset                          Lib                   src/Lib.hs:30:1-71                  577          1    0.0    0.0     0.0    0.0
+    getTupleByOffset                           Lib                   src/Lib.hs:27:1-47                  578          1    0.0    0.0     0.0    0.0
+     matchOffset                               Lib                   src/Lib.hs:25:1-69                  581      65410    0.0    0.0     0.0    0.0
+  loadFile.h                                   Lib                   src/Lib.hs:43:7-46                  554          1    0.0    0.0     0.0    0.0
+   getDosHeader                                Structures            src/Structures.hs:(59,3)-(78,19)    556          0    0.0    0.0     0.0    0.0
+    getRes                                     Structures            src/Structures.hs:(39,3)-(44,27)    559          0    0.0    0.0     0.0    0.0
+     getRes2                                   Structures            src/Structures.hs:(46,3)-(57,51)    561          0    0.0    0.0     0.0    0.0
+  mmapFileByteString                           System.IO.MMap        System/IO/MMap.hs:(276,1)-(279,21)  527          1    0.0    0.0     0.0    0.0
+   mmapFileByteString.bytestring               System.IO.MMap        System/IO/MMap.hs:278:9-61          557          1    0.0    0.0     0.0    0.0
+   mmapFileForeignPtr                          System.IO.MMap        System/IO/MMap.hs:(264,1)-(269,35)  531          0    0.0    0.0     0.0    0.0
+    checkModeRegion                            System.IO.MMap        System/IO/MMap.hs:(197,1)-(199,33)  532          1    0.0    0.0     0.0    0.0
+    mmapFileForeignPtr.rawsizeptr              System.IO.MMap        System/IO/MMap.hs:267:9-41          552          1    0.0    0.0     0.0    0.0
+     castIntToPtr                              System.IO.MMap        System/IO/MMap.hs:366:1-40          553          1    0.0    0.0     0.0    0.0
+    mmapFilePtr                                System.IO.MMap        System/IO/MMap.hs:(225,1)-(240,64)  533          1    0.0    0.0     0.0    0.0
+     checkModeRegion                           System.IO.MMap        System/IO/MMap.hs:(197,1)-(199,33)  534          1    0.0    0.0     0.0    0.0
+     mmapFileOpen                              System.IO.MMap        System/IO/MMap.hs:(354,1)-(360,17)  535          1    0.0    0.0     0.0    0.0
+      mmapFileOpen.\                           System.IO.MMap        System/IO/MMap.hs:356:9-74          537          1    0.0    0.0     0.0    0.0
+       fromEnum                                System.IO.MMap        System/IO/MMap.hs:165:22-25         538          1    0.0    0.0     0.0    0.0
+     mmapFilePtr.mmap                          System.IO.MMap        System/IO/MMap.hs:(230,9)-(240,64)  539          1    0.0    0.0     0.0    0.0
+      mmapFilePtr.mmap.\                       System.IO.MMap        System/IO/MMap.hs:(236,20)-(237,92) 550          1    0.0    0.0     0.0    0.0
+       fromEnum                                System.IO.MMap        System/IO/MMap.hs:165:22-25         551          1    0.0    0.0     0.0    0.0
+      mmapFilePtr.mmap.align                   System.IO.MMap        System/IO/MMap.hs:232:17-77         547          1    0.0    0.0     0.0    0.0
+      mmapFilePtr.mmap.offsetraw               System.IO.MMap        System/IO/MMap.hs:233:17-42         549          1    0.0    0.0     0.0    0.0
+      mmapFilePtr.mmap.sizeraw                 System.IO.MMap        System/IO/MMap.hs:234:17-53         548          1    0.0    0.0     0.0    0.0
+      sanitizeFileRegion                       System.IO.MMap        System/IO/MMap.hs:(168,1)-(194,24)  540          1    0.0    0.0     0.0    0.0
+       sanitizeFileRegion.\                    System.IO.MMap        System/IO/MMap.hs:(178,87)-(194,24) 541          1    0.0    0.0     0.0    0.0
+        ==                                     System.IO.MMap        System/IO/MMap.hs:165:15-16         546          1    0.0    0.0     0.0    0.0
+        sanitizeFileRegion.\.\                 System.IO.MMap        System/IO/MMap.hs:179:56-78         542          1    0.0    0.0     0.0    0.0
+  showsPrec                                    Structures            src/Structures.hs:34:15-18          562          1    0.0    0.0     0.0    0.0
+  mmapFileForeignPtrLazy                       System.IO.MMap        System/IO/MMap.hs:(293,1)-(300,96)  565          0    0.0    0.0   100.0   99.5
+   checkModeRegion                             System.IO.MMap        System/IO/MMap.hs:(197,1)-(199,33)  566          1    0.0    0.0     0.0    0.0
+   mmapFileForeignPtrLazy.mmap                 System.IO.MMap        System/IO/MMap.hs:(298,9)-(300,96)  572          1    1.5   14.5   100.0   99.5
+    chunks                                     System.IO.MMap        System/IO/MMap.hs:(324,1)-(329,93)  579      65410    1.5   25.7     3.8   30.2
+     chunks.offset2                            System.IO.MMap        System/IO/MMap.hs:326:38-117        583      65410    1.5    2.2     1.5    2.2
+     chunks.size2                              System.IO.MMap        System/IO/MMap.hs:327:38-63         582      65410    0.8    2.2     0.8    2.2
+    mmapFileForeignPtrLazyChunk                System.IO.MMap        System/IO/MMap.hs:(309,1)-(321,52)  586      65410    3.1    0.0    94.6   54.8
+     mmapFileForeignPtrLazyChunk.\             System.IO.MMap        System/IO/MMap.hs:(310,41)-(321,52) 587      65410   89.2   52.6    91.5   54.8
+      fromEnum                                 System.IO.MMap        System/IO/MMap.hs:165:22-25         588      65410    0.0    0.0     0.0    0.0
+      mmapFileForeignPtrLazyChunk.\.align      System.IO.MMap        System/IO/MMap.hs:311:13-73         589      65410    0.8    0.0     0.8    0.0
+      mmapFileForeignPtrLazyChunk.\.offsetraw  System.IO.MMap        System/IO/MMap.hs:312:13-38         591      65410    0.0    0.0     0.0    0.0
+      mmapFileForeignPtrLazyChunk.\.sizeraw    System.IO.MMap        System/IO/MMap.hs:313:13-49         590      65410    0.0    0.0     0.0    0.0
+      mmapFileForeignPtrLazyChunk.\.rawsizeptr System.IO.MMap        System/IO/MMap.hs:319:13-45         592      65409    1.5    2.2     1.5    2.2
+       castIntToPtr                            System.IO.MMap        System/IO/MMap.hs:366:1-40          593      65409    0.0    0.0     0.0    0.0
+    sanitizeFileRegion                         System.IO.MMap        System/IO/MMap.hs:(168,1)-(194,24)  573          1    0.0    0.0     0.0    0.0
+     sanitizeFileRegion.\                      System.IO.MMap        System/IO/MMap.hs:(178,87)-(194,24) 574          1    0.0    0.0     0.0    0.0
+      sanitizeFileRegion.\.\                   System.IO.MMap        System/IO/MMap.hs:179:56-78         575          1    0.0    0.0     0.0    0.0
+   mmapFileOpen                                System.IO.MMap        System/IO/MMap.hs:(354,1)-(360,17)  568          1    0.0    0.0     0.0    0.0
+    mmapFileOpen.\                             System.IO.MMap        System/IO/MMap.hs:356:9-74          570          1    0.0    0.0     0.0    0.0
+     fromEnum                                  System.IO.MMap        System/IO/MMap.hs:165:22-25         571          1    0.0    0.0     0.0    0.0
